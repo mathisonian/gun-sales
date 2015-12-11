@@ -25,8 +25,7 @@ ENV R_LIBS $HOME/r-libs
 
 # Install IRkernel
 RUN Rscript -e "install.packages(c('rzmq','repr','IRkernel','IRdisplay'), repos = c('http://irkernel.github.io/', getOption('repos')))" -e "IRkernel::installspec()"
-RUN Rscript -e "install.packages(c('curl', 'devtools'))"
-RUN Rscript -e "install.packages(c('curl', 'devtools', 'dplyr', 'seasonal', 'stringr'))"
+RUN Rscript -e "install.packages(c('curl', 'devtools', 'dplyr', 'seasonal', 'stringr', 'readr'))"
 
 
 RUN wget http://www.census.gov/ts/x13as/unix/x13asall_V1.1_B19.tar.gz
