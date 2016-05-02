@@ -29,5 +29,5 @@ RUN Rscript -e "install.packages(c('curl', 'devtools', 'dplyr', 'seasonal', 'str
 
 
 RUN wget http://www.census.gov/ts/x13as/unix/x13asall_V1.1_B19.tar.gz
-RUN tar xzvf x13asall_V1.1_B19.tar.gz
+RUN tar xvf x13asall_V1.1_B19.tar.gz
 ENV X13_PATH $HOME
