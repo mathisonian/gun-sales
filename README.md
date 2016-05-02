@@ -2,6 +2,10 @@
 
 [![Build Status](https://travis-ci.org/NYTimes/gunsales.svg)](https://travis-ci.org/NYTimes/gunsales) [![License](http://img.shields.io/badge/license-Apache%20%28=%202%29-brightgreen.svg?style=flat)](http://www.apache.org/licenses/LICENSE-2.0) [![CRAN](http://www.r-pkg.org/badges/version/gunsales)](http://cran.rstudio.com/package=gunsales) [![Downloads](http://cranlogs.r-pkg.org/badges/gunsales?color=brightgreen)](http://www.r-pkg.org/pkg/gunsales)
 
+
+[![Binder](http://mybinder.org/badge.svg)](http://mybinder.org/repo/mathisonian/gun-sales)
+
+
 Statistical analysis of monthly background checks of gun purchases for the New York Times story [What Drives Gun Sales: Terrorism,
 Obama and Calls for Restrictions](http://www.nytimes.com/interactive/2015/12/10/us/gun-sales-terrorism-obama-restrictions.html?).
 
