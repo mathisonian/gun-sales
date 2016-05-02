@@ -1,0 +1,5 @@
+^.*\.Rproj$
+^\.Rproj\.user$
+out
+R/deprecated.R$
+.travis.yml

@@ -1,0 +1,61 @@
+---
+title: "Statistical Analysis of Monthly Background Checks of Gun Purchases"
+author: "Gregor Aisch, Josh Keller and Dirk Eddelbuettel"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Monthly Background Checks of Gun Purchases}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, setup, include=FALSE}
+library(gunsales)
+```
+
+## About
+
+This document provides the analysis from the [New York Times](http://www.nytimes.com) 
+on-line article ["What Drives Gun Sales: Terrorism, Obama and Calls for Restrictions"](http://www.nytimes.com/interactive/2015/12/10/us/gun-sales-terrorism-obama-restrictions.html?). The [R](http://www.r-project.org) code underlying the analysis is provided
+in the [GitHub](http://www.github.com) repository [gunsales](https://github.com/NYTimes/gunsales) which contains the R package 
+
+
+## Part I Data
+
+The first step consists in transforming the two raw data sets included in the
+package into the data.frame used for the subsequent plotting.
+
+```{r, initialDataFake, eval=FALSE}
+gunsales <- analysis()
+```
+
+```{r, initialData, fig.width=7, echo=FALSE}
+if (gunsales:::.goodOS()) gunsales <- analysis() else cat("Unsupported platform -- no plots below.")
+```
+
+## Part II: Base Plots
+
+Given the transformed data, we can display the variety of plots contained in
+the New York Times analysis (which uses post-processed variants suitable for
+publication).
+
+```{r, basePlotsFake, eval=FALSE}
+plot_gunsales(gunsales)
+```
+
+```{r, basePlots, fig.width=7, echo=FALSE}
+if (gunsales:::.goodOS()) plot_gunsales(gunsales)
+```
+
+## Part III: Using ggplot
+
+The second set of charts redisplays the same charts as before, but using the
+[ggplot2](http://cloud.r-project.org/package=ggplot2) package.
+
+```{r, ggPlotsFake, eval=FALSE}
+ggplot_gunsales(gunsales)
+```
+
+```{r, ggPlots, fig.width=7, echo=FALSE}
+if (gunsales:::.goodOS()) ggplot_gunsales(gunsales)
+```
